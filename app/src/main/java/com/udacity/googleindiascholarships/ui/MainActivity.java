@@ -1,6 +1,6 @@
 package com.udacity.googleindiascholarships.ui;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -27,7 +27,7 @@ import com.udacity.googleindiascholarships.community.ui.CommunityFragment;
 import com.udacity.googleindiascholarships.members.ui.MembersFragment;
 import com.udacity.googleindiascholarships.projects.ui.ProjectsFragment;
 import com.udacity.googleindiascholarships.quizzes.ui.QuizzesFragment;
-import com.udacity.googleindiascholarships.stories.ui.StoriesFragment;
+import com.udacity.googleindiascholarships.stories.MainActivitySto;
 
 import java.util.Arrays;
 
@@ -152,7 +152,8 @@ public class MainActivity extends AppCompatActivity
                 fragment = new MembersFragment();
                 break;
             case R.id.nav_gis_stories:
-                fragment = new StoriesFragment();
+//                fragment = new StoriesFragment();
+                startActivity(new Intent(MainActivity.this, MainActivitySto.class));
                 break;
             case R.id.nav_projects:
                 fragment = new ProjectsFragment();
